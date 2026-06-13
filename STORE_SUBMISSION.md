@@ -31,6 +31,26 @@
 - Production Android builds create Play Store `.aab` files.
 - EAS remote versioning is enabled, so `ios.buildNumber` and `android.versionCode` are managed by EAS.
 
+### Current Internal-Test Builds
+
+- Android AAB
+  - EAS build ID: `a5254fe0-6b17-4aad-b216-bf77949587c9`
+  - Version: `1.0.0`
+  - Version code: `2`
+  - Local artifact: `builds/pickleball-score-keeper-android-1.0.0-2.aab`
+  - EAS build page: `https://expo.dev/accounts/abridegan/projects/pickleball-score-keeper/builds/a5254fe0-6b17-4aad-b216-bf77949587c9`
+- iOS IPA
+  - EAS build ID: `19678d11-0d4e-472b-8629-ab005cbc9af0`
+  - Version: `1.0.0`
+  - Build number: `3`
+  - Local artifact: `builds/pickleball-score-keeper-ios-1.0.0-3.ipa`
+  - EAS build page: `https://expo.dev/accounts/abridegan/projects/pickleball-score-keeper/builds/19678d11-0d4e-472b-8629-ab005cbc9af0`
+
+### Submission Status
+
+- Android: EAS automated submit was attempted for the `internal` track and failed because Google requires the first submission of a new app to be performed manually in Play Console.
+- iOS: EAS automated submit is ready once the Pickleball App Store Connect app exists and its `ascAppId` is added to `eas.json`.
+
 ## Remaining Console Setup
 
 1. Create the Apple App Store Connect app record for the Pickleball bundle ID.
