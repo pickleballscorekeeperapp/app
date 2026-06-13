@@ -20,14 +20,12 @@
     "ios": {
       "supportsTablet": true,
       "bundleIdentifier": "com.houseofturnberry.pickleballscorekeeper",
-      "buildNumber": "1",
       "infoPlist": {
         "ITSAppUsesNonExemptEncryption": false
       }
     },
     "android": {
       "package": "com.houseofturnberry.pickleballscorekeeper",
-      "versionCode": 1,
       "adaptiveIcon": {
         "foregroundImage": "./assets/adaptive-icon.png",
         "backgroundColor": "#20A66B"

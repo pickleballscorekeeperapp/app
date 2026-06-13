@@ -13,7 +13,6 @@
     },
     "preview": {
       "distribution": "internal",
-      "channel": "preview",
       "ios": {
         "simulator": false
       },
@@ -23,7 +22,6 @@
     },
     "production": {
       "autoIncrement": true,
-      "channel": "production",
       "ios": {
         "resourceClass": "m-medium",
         "image": "latest"
@@ -36,7 +34,13 @@
   },
   "submit": {
     "production": {
+      "ios": {
+        "ascApiKeyPath": "./secrets/AuthKey_YRNL39GT95.p8",
+        "ascApiKeyId": "YRNL39GT95",
+        "ascApiKeyIssuerId": "f62894d2-98e2-48c7-ab82-209be0f206d1"
+      },
       "android": {
+        "serviceAccountKeyPath": "./secrets/google-play-key.json",
         "track": "internal"
       }
     }
