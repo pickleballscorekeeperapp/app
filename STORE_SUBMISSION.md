@@ -66,7 +66,16 @@
   - Local artifact: `builds/pickleball-score-keeper-ios-1.0.0-4.ipa`
   - EAS build page: `https://expo.dev/accounts/abridegan/projects/pickleball-score-keeper/builds/f34a68f4-98cc-4e97-b0a1-bd8fae6e93c7`
   - IPA URL: `https://expo.dev/artifacts/eas/lXhYfr74hwTnu0mGDbpu6oM-sAoh6etO4NkXu_JBmSk.ipa`
-  - Status: current App Store/TestFlight candidate; validated as iPhone-only, bundle ID `com.houseofturnberry.pickleballscorekeeper`, version `1.0.0`, build `4`.
+  - Status: superseded by build `5`, which is tied to the committed release-prep source.
+- iOS IPA
+  - EAS build ID: `9df711ae-ff8d-499c-b393-1d4b27026532`
+  - Version: `1.0.0`
+  - Build number: `5`
+  - Commit: `25f2b30cd8bec3752bf50b6e2a5ff49500052db1`
+  - Local artifact: `builds/pickleball-score-keeper-ios-1.0.0-5.ipa`
+  - EAS build page: `https://expo.dev/accounts/abridegan/projects/pickleball-score-keeper/builds/9df711ae-ff8d-499c-b393-1d4b27026532`
+  - IPA URL: `https://expo.dev/artifacts/eas/8P_8uLAMMNHgcZbjt3hCtFAR4sFRSUR8qU4Y9rXExZI.ipa`
+  - Status: current App Store/TestFlight candidate; validated as iPhone-only, bundle ID `com.houseofturnberry.pickleballscorekeeper`, version `1.0.0`, build `5`, encryption flag `false`.
 
 ### Submission Status
 
@@ -78,7 +87,7 @@
 1. Run `npm run release:check-boundary`.
 2. Create the Apple App Store Connect app record for the Pickleball bundle ID.
 3. Add the resulting Pickleball `ascAppId` to `eas.json` under `submit.production.ios` if EAS cannot auto-detect it by bundle ID.
-4. Submit iOS build `f34a68f4-98cc-4e97-b0a1-bd8fae6e93c7` / build number `4` to App Store Connect/TestFlight.
+4. Submit iOS build `9df711ae-ff8d-499c-b393-1d4b27026532` / build number `5` to App Store Connect/TestFlight.
 5. Create the Google Play Console app record for the Pickleball package name.
 6. Upload the Android build to the `internal` track, or rebuild Android first if you want all artifacts from the same release commit.
 7. Add internal testers in App Store Connect/TestFlight and Google Play Console.
