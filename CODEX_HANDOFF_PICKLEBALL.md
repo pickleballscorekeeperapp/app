@@ -37,8 +37,8 @@ A standalone iOS + Android app. One job: keep the official USA Pickleball score 
 
 1. **Full typecheck.** `npm run typecheck` — the pure engine is verified; the RN/TSX layer compiled and ran clean in Metro but has not been run through `tsc` against node_modules. Fix any nits. Run `npm test` (should stay 12/12).
 2. **Full-game smoke test.** Play to 11 incl. deuce (11-10 must NOT end; 12-10 ends), Save & Done → History, force-quit mid-game → Resume card. Test Android emulator too.
-3. **Git init + new GitHub repo** `pickleball-score-keeper`. First commit from the project root.
-4. **EAS setup.** `eas init` (NEW project — do NOT reuse CourtsideView's projectId; `app.json` deliberately has no `extra.eas` block). Add `eas.json` modeled on CourtsideView's. Then production builds for both platforms. Apple: House of Turnberry team, new bundle ID + App Store Connect app.
+3. **GitHub repo.** Use the standalone remote `https://github.com/pickleballscorekeeperapp/app.git`; do not push this code into the CourtsideView repo.
+4. **EAS setup.** Use the existing separate project `@abridegan/pickleball-score-keeper` (`6f29222e-67f0-411b-851b-32e23775487e`). It may share the `abridegan` owner with CourtsideView, but it must never reuse CourtsideView's project ID, bundle ID, App Store record, or git remote. Apple: same Developer account, new bundle ID + App Store Connect app.
 5. **Store metadata.** Name "Pickleball Score Keeper", subtitle "Official side-out scoring", category Sports. No tracking, no network calls, no permissions — privacy "Data Not Collected".
 
 ## Cross-cutting rules

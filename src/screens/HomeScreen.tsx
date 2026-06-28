@@ -95,6 +95,8 @@ export function HomeScreen() {
           </View>
         ))
       )}
+
+      <Text style={styles.poweredBy}>Powered by CourtsideView</Text>
     </ScrollView>
   );
 }
@@ -218,4 +220,13 @@ const styles = StyleSheet.create({
   },
   winScore: { color: colors.green },
   gameDate: { color: colors.textDim, fontSize: fontSize.xs, marginTop: 2 },
+  poweredBy: {
+    color: colors.textDim,
+    fontSize: fontSize.xs,
+    fontWeight: fontWeight.semibold,
+    letterSpacing: 0.6,
+    marginTop: space['5'],
+    textAlign: 'center',
+    textTransform: 'uppercase',
+  },
 });
