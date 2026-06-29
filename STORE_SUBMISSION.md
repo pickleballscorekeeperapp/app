@@ -108,16 +108,36 @@
   - IPA URL: `https://expo.dev/artifacts/eas/2s7-dpf83kjGxT77oxKwDELZbqMhfzHU2aROlx4W3CU.ipa`
   - App Store Connect build upload ID: `9596df89-48df-4d63-88f1-87cc8c316c81`
   - TestFlight page: `https://appstoreconnect.apple.com/apps/6785500385/testflight/ios`
-  - Status: current App Store/TestFlight candidate; confirmed `VALID` by the App Store Connect API; validated as iPhone-only, display name `Easy Pickleball Scoreboard`, bundle ID `com.courtsideviewapp.pickleballscorekeeper`, version `1.0.0`, build `4`, portrait plus landscape orientations, encryption flag `false`.
+  - Status: superseded by build `6`, which adds the final Savoye wordmark home treatment.
+- iOS IPA
+  - EAS build ID: `b999d051-d02d-4f99-9696-a4ca5cbbe0d4`
+  - Version: `1.0.0`
+  - Build number: `5`
+  - Commit: `f472d5aa28912a352cd3b687ff60a63fbbc25410`
+  - Local artifact: not retained as release candidate
+  - EAS build page: `https://expo.dev/accounts/abridegan/projects/pickleball-score-keeper/builds/b999d051-d02d-4f99-9696-a4ca5cbbe0d4`
+  - IPA URL: `https://expo.dev/artifacts/eas/jEgU2uXyRb5n17HcElLlN7MP9Iw0GddRHwYRAATQSt8.ipa`
+  - Status: superseded by build `6`, which adds the final Savoye wordmark home treatment.
+- iOS IPA
+  - EAS build ID: `71d1c9a5-03bc-4034-bf9d-6b870e15d55a`
+  - Version: `1.0.0`
+  - Build number: `6`
+  - Commit: `2e1d35ff931182c65c8f62ebe9d082d77708ca2d`
+  - Local artifact: `builds/easy-pickleball-scoreboard-ios-1.0.0-6-savoye-wordmark.ipa`
+  - EAS build page: `https://expo.dev/accounts/abridegan/projects/pickleball-score-keeper/builds/71d1c9a5-03bc-4034-bf9d-6b870e15d55a`
+  - IPA URL: `https://expo.dev/artifacts/eas/vtTdQW3fkl8n88stVuLJNRei_pVpkL8G016EGVNnTu0.ipa`
+  - App Store Connect delivery UUID: `62371b06-2afa-4353-8fc3-b81c4fb289c6`
+  - TestFlight page: `https://appstoreconnect.apple.com/apps/6785500385/testflight/ios`
+  - Status: current App Store/TestFlight candidate; confirmed `VALID` and `APP_STORE_ELIGIBLE` by Apple `altool`; validated as iPhone-only, display name `Easy Pickleball Scoreboard`, bundle ID `com.courtsideviewapp.pickleballscorekeeper`, version `1.0.0`, build `6`, portrait plus landscape orientations, encryption flag `false`.
 
 ### Submission Status
 
 - Android: EAS automated submit was attempted for the `internal` track and failed because Google requires the first submission of a new app to be performed manually in Play Console.
-- iOS: Build `4` was uploaded to App Store Connect and is `VALID`. Select build `4` on the `1.0 Prepare for Submission` page and finish metadata/review fields before adding the app for review.
+- iOS: Build `6` was uploaded to App Store Connect and is `VALID` / `APP_STORE_ELIGIBLE`. Select build `6` on the `1.0 Prepare for Submission` page and finish metadata/review fields before adding the app for review.
 
 ## Remaining Console Setup
 
-1. On the `1.0 Prepare for Submission` page, select build `4`.
+1. On the `1.0 Prepare for Submission` page, select build `6`.
 2. Add one to ten iPhone screenshots. App previews are optional.
 3. Complete product metadata, app category, content rights, age rating, pricing/availability, App Privacy, support URL, privacy policy URL, copyright, and App Review contact/notes.
 4. Add internal testers in App Store Connect/TestFlight if desired.
