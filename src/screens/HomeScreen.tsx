@@ -1,5 +1,5 @@
 import React from 'react';
-import { Pressable, ScrollView, StyleSheet, Text, View } from 'react-native';
+import { Image, Pressable, ScrollView, StyleSheet, Text, View } from 'react-native';
 import { useNavigation } from '@react-navigation/native';
 import { useSafeAreaInsets } from 'react-native-safe-area-context';
 import { colors, families, fontSize, fontWeight, radius, shadows, space } from '@/theme';
@@ -28,10 +28,20 @@ export function HomeScreen() {
         { paddingTop: insets.top + space['6'], paddingBottom: insets.bottom + space['6'] },
       ]}
     >
-      <Text style={styles.title}>Easy Pickleball{'\n'}Scoreboard</Text>
-      <Text style={styles.subtitle}>
-        Official USA Pickleball side-out scoring. Never wonder what the call is.
-      </Text>
+      <View style={styles.hero}>
+        <Image
+          source={require('../../assets/icon.png')}
+          style={styles.logo}
+          resizeMode="cover"
+          accessibilityIgnoresInvertColors
+        />
+        <View style={styles.heroCopy}>
+          <Text style={styles.title}>Easy Pickleball{'\n'}Scoreboard</Text>
+          <Text style={styles.subtitle}>
+            Official USA Pickleball side-out scoring. Never wonder what the call is.
+          </Text>
+        </View>
+      </View>
 
       {hasLiveGame && config && live && (
         <Pressable
@@ -106,19 +116,34 @@ export function HomeScreen() {
 const styles = StyleSheet.create({
   screen: { flex: 1, backgroundColor: colors.bg },
   content: { paddingHorizontal: space['5'] },
+  hero: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    gap: space['4'],
+    marginBottom: space['6'],
+  },
+  logo: {
+    width: 82,
+    height: 82,
+    borderRadius: radius.lg,
+    borderWidth: 1,
+    borderColor: colors.border,
+    backgroundColor: colors.green,
+    ...shadows.card,
+  },
+  heroCopy: { flex: 1 },
   title: {
     fontFamily: families.display,
     color: colors.text,
-    fontSize: fontSize['4xl'],
+    fontSize: 34,
     fontWeight: fontWeight.black,
-    lineHeight: 40,
+    lineHeight: 36,
     marginBottom: space['2'],
   },
   subtitle: {
     color: colors.textMuted,
-    fontSize: fontSize.md,
-    lineHeight: 21,
-    marginBottom: space['6'],
+    fontSize: fontSize.sm,
+    lineHeight: 19,
   },
   resumeCard: {
     backgroundColor: colors.bgElevated,
