@@ -13,12 +13,14 @@ import { useNavigation } from '@react-navigation/native';
 import { useSafeAreaInsets } from 'react-native-safe-area-context';
 import { colors, fontSize, fontWeight, minTouch, radius, shadows, space } from '@/theme';
 import { useGameStore } from '@/store/gameStore';
+import { usePortraitOrientation } from '@/hooks/useScreenOrientation';
 import type { TeamId } from '@/domain/scoring';
 import type { RootNav } from '@/navigation/types';
 
 const POINT_OPTIONS = [11, 15, 21] as const;
 
 export function SetupScreen() {
+  usePortraitOrientation();
   const nav = useNavigation<RootNav>();
   const insets = useSafeAreaInsets();
   const startGame = useGameStore((s) => s.startGame);

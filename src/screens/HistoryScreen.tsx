@@ -4,9 +4,11 @@ import { useNavigation } from '@react-navigation/native';
 import { useSafeAreaInsets } from 'react-native-safe-area-context';
 import { colors, fontSize, fontWeight, radius, space } from '@/theme';
 import { useHistoryStore, type CompletedGame } from '@/store/historyStore';
+import { usePortraitOrientation } from '@/hooks/useScreenOrientation';
 import type { RootNav } from '@/navigation/types';
 
 export function HistoryScreen() {
+  usePortraitOrientation();
   const nav = useNavigation<RootNav>();
   const insets = useSafeAreaInsets();
   const games = useHistoryStore((s) => s.games);

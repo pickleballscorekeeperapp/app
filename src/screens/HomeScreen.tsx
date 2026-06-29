@@ -6,9 +6,11 @@ import { colors, families, fontSize, fontWeight, radius, shadows, space } from '
 import { useGameStore } from '@/store/gameStore';
 import { useHistoryStore } from '@/store/historyStore';
 import { replay, scoreCall } from '@/domain/scoring';
+import { usePortraitOrientation } from '@/hooks/useScreenOrientation';
 import type { RootNav } from '@/navigation/types';
 
 export function HomeScreen() {
+  usePortraitOrientation();
   const nav = useNavigation<RootNav>();
   const insets = useSafeAreaInsets();
   const { config, events } = useGameStore();
