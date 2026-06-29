@@ -13,7 +13,7 @@ A standalone iOS + Android app. One job: keep the official USA Pickleball score 
 - **Stores:** `src/store/gameStore.ts` (live event log, persisted — survives force-quit mid-game), `src/store/historyStore.ts` (completed games). Both use `createJSONStorage(() => AsyncStorage)` — keep this exact pattern (raw storage objects crash Zustand v5 persist; see CourtsideView v1.2.11 crash fix).
 - **Theme:** `src/theme/` — ported from CourtsideView v11 (cream bg #F7F8FB, green #20A66B) + pickleball accents (`ball`, `courtBlue`, `teamA` blue / `teamB` green).
 - **UI:** `src/screens/` + `src/components/TeamPanel.tsx`. Core interaction: tap the side that won the rally; the engine decides point / second server / side-out. The score-call banner ("0 – 1 – 1") is the hero element.
-- **IDs:** iOS + Android `com.houseofturnberry.pickleballscorekeeper`.
+- **IDs:** iOS + Android `com.courtsideviewapp.pickleballscorekeeper`.
 - **Assets:** `assets/icon.png`, `adaptive-icon.png`, `splash-icon.png` — generated placeholder pickleball marks, fine for TestFlight, replace before store launch.
 
 ## Rules implemented (USA Pickleball Rulebook §4) — verified on-device, don't relitigate

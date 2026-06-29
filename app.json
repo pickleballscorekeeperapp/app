@@ -19,13 +19,13 @@
     ],
     "ios": {
       "supportsTablet": false,
-      "bundleIdentifier": "com.houseofturnberry.pickleballscorekeeper",
+      "bundleIdentifier": "com.courtsideviewapp.pickleballscorekeeper",
       "infoPlist": {
         "ITSAppUsesNonExemptEncryption": false
       }
     },
     "android": {
-      "package": "com.houseofturnberry.pickleballscorekeeper",
+      "package": "com.courtsideviewapp.pickleballscorekeeper",
       "adaptiveIcon": {
         "foregroundImage": "./assets/adaptive-icon.png",
         "backgroundColor": "#20A66B"

@@ -28,5 +28,5 @@ Then press `i` for the iPhone simulator, or scan the QR code with the Expo Go ap
 - ✅ Codex: new GitHub remote set to `pickleballscorekeeperapp/app`
 - ✅ EAS project is separate from CourtsideView: `@abridegan/pickleball-score-keeper`
 - ⏳ Android smoke test (no Android SDK/emulator available on this Mac session)
-- ⏳ App Store / Play Store setup (new bundle ID: com.houseofturnberry.pickleballscorekeeper)
+- ⏳ App Store / Play Store setup (new bundle ID: com.courtsideviewapp.pickleballscorekeeper)
 - 🎨 App icons are auto-generated placeholders — fine for testing, we'll design real ones before launch

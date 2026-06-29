@@ -7,8 +7,8 @@ const expected = {
   owner: 'abridegan',
   easFullName: '@abridegan/pickleball-score-keeper',
   easProjectId: '6f29222e-67f0-411b-851b-32e23775487e',
-  iosBundleId: 'com.houseofturnberry.pickleballscorekeeper',
-  androidPackage: 'com.houseofturnberry.pickleballscorekeeper',
+  iosBundleId: 'com.courtsideviewapp.pickleballscorekeeper',
+  androidPackage: 'com.courtsideviewapp.pickleballscorekeeper',
   origin: 'https://github.com/pickleballscorekeeperapp/app.git',
 };
 
