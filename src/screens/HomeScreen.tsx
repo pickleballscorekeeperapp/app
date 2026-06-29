@@ -1,5 +1,5 @@
 import React from 'react';
-import { Image, Pressable, ScrollView, StyleSheet, Text, View } from 'react-native';
+import { Image, Platform, Pressable, ScrollView, StyleSheet, Text, View } from 'react-native';
 import { useNavigation } from '@react-navigation/native';
 import { useSafeAreaInsets } from 'react-native-safe-area-context';
 import { colors, families, fontSize, fontWeight, radius, shadows, space } from '@/theme';
@@ -29,18 +29,33 @@ export function HomeScreen() {
       ]}
     >
       <View style={styles.hero}>
-        <Image
-          source={require('../../assets/icon.png')}
-          style={styles.logo}
-          resizeMode="cover"
-          accessibilityIgnoresInvertColors
-        />
-        <View style={styles.heroCopy}>
-          <Text style={styles.title}>Easy Pickleball{'\n'}Scoreboard</Text>
-          <Text style={styles.subtitle}>
-            Official USA Pickleball side-out scoring. Never wonder what the call is.
-          </Text>
+        <View style={styles.brandRow}>
+          <Image
+            source={require('../../assets/icon.png')}
+            style={styles.logo}
+            resizeMode="cover"
+            accessibilityIgnoresInvertColors
+          />
+          <View style={styles.wordmarkWrap} accessible accessibilityRole="header">
+            <Text
+              style={styles.wordmarkTop}
+              numberOfLines={1}
+            >
+              Easy Pickleball
+            </Text>
+            <Text
+              style={styles.wordmarkBottom}
+              numberOfLines={1}
+            >
+              Scoreboard
+            </Text>
+            <View style={styles.wordmarkAccent} />
+          </View>
         </View>
+        <Text style={styles.title}>Side-out scoring made simple</Text>
+        <Text style={styles.subtitle}>
+          Official USA Pickleball side-out scoring. Never wonder what the call is.
+        </Text>
       </View>
 
       {hasLiveGame && config && live && (
@@ -117,10 +132,13 @@ const styles = StyleSheet.create({
   screen: { flex: 1, backgroundColor: colors.bg },
   content: { paddingHorizontal: space['5'] },
   hero: {
+    marginBottom: space['6'],
+  },
+  brandRow: {
     flexDirection: 'row',
     alignItems: 'center',
     gap: space['4'],
-    marginBottom: space['6'],
+    marginBottom: space['4'],
   },
   logo: {
     width: 82,
@@ -131,14 +149,56 @@ const styles = StyleSheet.create({
     backgroundColor: colors.green,
     ...shadows.card,
   },
-  heroCopy: { flex: 1 },
+  wordmarkWrap: {
+    flex: 1,
+    minHeight: 100,
+    justifyContent: 'center',
+    paddingTop: space['2'],
+    paddingBottom: space['2'],
+  },
+  wordmarkTop: {
+    color: colors.green,
+    fontFamily: Platform.select({
+      ios: 'SavoyeLetPlain',
+      default: families.display,
+    }),
+    fontSize: 36,
+    fontWeight: fontWeight.regular,
+    lineHeight: 44,
+    textShadowColor: 'rgba(32, 166, 107, 0.12)',
+    textShadowOffset: { width: 0, height: 2 },
+    textShadowRadius: 4,
+  },
+  wordmarkBottom: {
+    color: colors.text,
+    fontFamily: Platform.select({
+      ios: 'SavoyeLetPlain',
+      default: families.display,
+    }),
+    fontSize: 43,
+    fontWeight: fontWeight.regular,
+    lineHeight: 50,
+    marginTop: -15,
+  },
+  wordmarkAccent: {
+    width: 150,
+    height: 5,
+    backgroundColor: colors.ballBright,
+    borderRadius: radius.pill,
+    marginLeft: space['2'],
+    marginTop: -5,
+    transform: [{ rotate: '-2deg' }],
+  },
   title: {
     fontFamily: families.display,
-    color: colors.text,
-    fontSize: 34,
-    fontWeight: fontWeight.black,
-    lineHeight: 36,
-    marginBottom: space['2'],
+    color: colors.textDim,
+    fontSize: fontSize.xs,
+    fontWeight: fontWeight.extrabold,
+    letterSpacing: 1.2,
+    lineHeight: 16,
+    marginTop: space['2'],
+    marginBottom: space['1'],
+    textTransform: 'uppercase',
   },
   subtitle: {
     color: colors.textMuted,
