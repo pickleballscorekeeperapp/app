@@ -42,6 +42,7 @@
 - Production Android builds create Play Store `.aab` files.
 - EAS remote versioning is enabled, so `ios.buildNumber` and `android.versionCode` are managed by EAS.
 - Same EAS owner as CourtsideView is acceptable. Confirm `eas project:info` shows `@abridegan/pickleball-score-keeper`, not `@abridegan/courtsideview`, before any build or submit.
+- Apple provisioning profile for `com.courtsideviewapp.pickleballscorekeeper`: `3CPS73H49L`, active, expires Sun, 02 May 2027 09:45:49 EDT.
 
 ### Current Internal-Test Builds
 
@@ -76,6 +77,15 @@
   - EAS build page: `https://expo.dev/accounts/abridegan/projects/pickleball-score-keeper/builds/9df711ae-ff8d-499c-b393-1d4b27026532`
   - IPA URL: `https://expo.dev/artifacts/eas/8P_8uLAMMNHgcZbjt3hCtFAR4sFRSUR8qU4Y9rXExZI.ipa`
   - Status: obsolete because it uses the previous bundle ID `com.houseofturnberry.pickleballscorekeeper`. Rebuild before App Store Connect submission.
+- iOS IPA
+  - EAS build ID: `891d1bdb-ae58-460d-a298-c59155b9500f`
+  - Version: `1.0.0`
+  - Build number: `2`
+  - Commit: `5f65c0f5f92dfe6c49cfdeef0477a6350211face`
+  - Local artifact: `builds/pickleball-score-keeper-ios-1.0.0-2-courtsideviewapp.ipa`
+  - EAS build page: `https://expo.dev/accounts/abridegan/projects/pickleball-score-keeper/builds/891d1bdb-ae58-460d-a298-c59155b9500f`
+  - IPA URL: `https://expo.dev/artifacts/eas/glaPKcDxtYF-WFPmkMBCL2erQmGcq4eTAeycK9nMnNA.ipa`
+  - Status: current App Store/TestFlight candidate; validated as iPhone-only, bundle ID `com.courtsideviewapp.pickleballscorekeeper`, version `1.0.0`, build `2`, encryption flag `false`.
 
 ### Submission Status
 
@@ -87,7 +97,7 @@
 1. Run `npm run release:check-boundary`.
 2. Create the Apple App Store Connect app record for the Pickleball bundle ID `com.courtsideviewapp.pickleballscorekeeper`.
 3. Add the resulting Pickleball `ascAppId` to `eas.json` under `submit.production.ios` if EAS cannot auto-detect it by bundle ID.
-4. Run a fresh iOS production build with the `com.courtsideviewapp.pickleballscorekeeper` bundle ID, then submit that build to App Store Connect/TestFlight.
+4. Submit iOS build `891d1bdb-ae58-460d-a298-c59155b9500f` / build number `2` to App Store Connect/TestFlight.
 5. Create the Google Play Console app record for the Pickleball package name `com.courtsideviewapp.pickleballscorekeeper`.
 6. Run a fresh Android production build with the `com.courtsideviewapp.pickleballscorekeeper` package ID, then upload it to the `internal` track.
 7. Add internal testers in App Store Connect/TestFlight and Google Play Console.
