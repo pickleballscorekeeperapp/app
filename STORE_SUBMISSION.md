@@ -87,18 +87,30 @@
   - EAS build page: `https://expo.dev/accounts/abridegan/projects/pickleball-score-keeper/builds/891d1bdb-ae58-460d-a298-c59155b9500f`
   - IPA URL: `https://expo.dev/artifacts/eas/glaPKcDxtYF-WFPmkMBCL2erQmGcq4eTAeycK9nMnNA.ipa`
   - Status: obsolete because the App Store product name changed to `Easy Pickleball Scoreboard`; rebuild with the updated display name before submission.
+- iOS IPA
+  - EAS build ID: `d55c9600-1572-4383-a646-2aa1aec37acd`
+  - Version: `1.0.0`
+  - Build number: `3`
+  - Commit: `53a0bd42c9304b715d3f7f7733d97c3fa2ab6739`
+  - Local artifact: `builds/easy-pickleball-scoreboard-ios-1.0.0-3.ipa`
+  - EAS build page: `https://expo.dev/accounts/abridegan/projects/pickleball-score-keeper/builds/d55c9600-1572-4383-a646-2aa1aec37acd`
+  - IPA URL: `https://expo.dev/artifacts/eas/5yvv0b9ptZZEUzBCLD-yjwiGCzFj8Wz9VpZNYC8N2qk.ipa`
+  - EAS submission ID: `b3576203-f84e-4b70-98bd-0acee1249838`
+  - TestFlight page: `https://appstoreconnect.apple.com/apps/6785500385/testflight/ios`
+  - Status: uploaded to App Store Connect and processing with Apple; validated as iPhone-only, display name `Easy Pickleball Scoreboard`, bundle ID `com.courtsideviewapp.pickleballscorekeeper`, version `1.0.0`, build `3`, encryption flag `false`.
 
 ### Submission Status
 
 - Android: EAS automated submit was attempted for the `internal` track and failed because Google requires the first submission of a new app to be performed manually in Play Console.
-- iOS: App Store Connect app exists as `Easy Pickleball Scoreboard` with `ascAppId` `6785500385`. EAS submit is configured to target that app.
+- iOS: Build `3` was submitted to App Store Connect via EAS and is processing with Apple. Once it appears in TestFlight, select it on the `1.0 Prepare for Submission` page and finish metadata/review fields before adding the app for review.
 
 ## Remaining Console Setup
 
-1. Run `npm run release:check-boundary`.
-2. Run a fresh iOS production build so the IPA display name matches `Easy Pickleball Scoreboard`.
-3. Submit the fresh iOS build to App Store Connect/TestFlight.
-4. Complete App Store Connect product metadata, screenshots, privacy, rating, and review information in the browser.
-5. Add internal testers in App Store Connect/TestFlight.
-6. Create the Google Play Console app record for the Pickleball package name `com.courtsideviewapp.pickleballscorekeeper`.
-7. Run a fresh Android production build with the `com.courtsideviewapp.pickleballscorekeeper` package ID, then upload it to the `internal` track.
+1. Wait for Apple processing to finish and confirm build `3` appears under TestFlight for app `6785500385`.
+2. On the `1.0 Prepare for Submission` page, select build `3`.
+3. Add one to ten iPhone screenshots. App previews are optional.
+4. Complete product metadata, app category, content rights, age rating, pricing/availability, App Privacy, support URL, privacy policy URL, copyright, and App Review contact/notes.
+5. Add internal testers in App Store Connect/TestFlight if desired.
+6. Click `Add for Review` after all required fields are complete.
+7. Create the Google Play Console app record for the Pickleball package name `com.courtsideviewapp.pickleballscorekeeper`.
+8. Run a fresh Android production build with the `com.courtsideviewapp.pickleballscorekeeper` package ID, then upload it to the `internal` track.
