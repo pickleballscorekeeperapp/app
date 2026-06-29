@@ -97,16 +97,27 @@
   - IPA URL: `https://expo.dev/artifacts/eas/5yvv0b9ptZZEUzBCLD-yjwiGCzFj8Wz9VpZNYC8N2qk.ipa`
   - EAS submission ID: `b3576203-f84e-4b70-98bd-0acee1249838`
   - TestFlight page: `https://appstoreconnect.apple.com/apps/6785500385/testflight/ios`
-  - Status: uploaded to App Store Connect and confirmed `VALID` by the App Store Connect API; validated as iPhone-only, display name `Easy Pickleball Scoreboard`, bundle ID `com.courtsideviewapp.pickleballscorekeeper`, version `1.0.0`, build `3`, encryption flag `false`.
+  - Status: superseded by build `4`, which adds the landscape scoreboard mode.
+- iOS IPA
+  - EAS build ID: `662f7a7e-1885-47e5-8825-13df0c53b1ff`
+  - Version: `1.0.0`
+  - Build number: `4`
+  - Commit: `9e581bd`
+  - Local artifact: `builds/easy-pickleball-scoreboard-ios-1.0.0-4-landscape.ipa`
+  - EAS build page: `https://expo.dev/accounts/abridegan/projects/pickleball-score-keeper/builds/662f7a7e-1885-47e5-8825-13df0c53b1ff`
+  - IPA URL: `https://expo.dev/artifacts/eas/2s7-dpf83kjGxT77oxKwDELZbqMhfzHU2aROlx4W3CU.ipa`
+  - App Store Connect build upload ID: `9596df89-48df-4d63-88f1-87cc8c316c81`
+  - TestFlight page: `https://appstoreconnect.apple.com/apps/6785500385/testflight/ios`
+  - Status: current App Store/TestFlight candidate; confirmed `VALID` by the App Store Connect API; validated as iPhone-only, display name `Easy Pickleball Scoreboard`, bundle ID `com.courtsideviewapp.pickleballscorekeeper`, version `1.0.0`, build `4`, portrait plus landscape orientations, encryption flag `false`.
 
 ### Submission Status
 
 - Android: EAS automated submit was attempted for the `internal` track and failed because Google requires the first submission of a new app to be performed manually in Play Console.
-- iOS: Build `3` was submitted to App Store Connect via EAS and is `VALID`. Select it on the `1.0 Prepare for Submission` page and finish metadata/review fields before adding the app for review.
+- iOS: Build `4` was uploaded to App Store Connect and is `VALID`. Select build `4` on the `1.0 Prepare for Submission` page and finish metadata/review fields before adding the app for review.
 
 ## Remaining Console Setup
 
-1. On the `1.0 Prepare for Submission` page, select build `3`.
+1. On the `1.0 Prepare for Submission` page, select build `4`.
 2. Add one to ten iPhone screenshots. App previews are optional.
 3. Complete product metadata, app category, content rights, age rating, pricing/availability, App Privacy, support URL, privacy policy URL, copyright, and App Review contact/notes.
 4. Add internal testers in App Store Connect/TestFlight if desired.
