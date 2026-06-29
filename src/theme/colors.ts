@@ -1,5 +1,5 @@
 /**
- * Pickleball Score Keeper color tokens.
+ * Easy Pickleball Scoreboard color tokens.
  * Ported from the CourtsideView v11 design canon (light cream + green primary),
  * with a pickleball accent set: optic-yellow ball + court blue.
  * Light-only at launch.

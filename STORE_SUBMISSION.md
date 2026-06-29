@@ -1,4 +1,4 @@
-# Pickleball Score Keeper Store Submission Notes
+# Easy Pickleball Scoreboard Store Submission Notes
 
 ## Separation From CourtsideView
 
@@ -21,7 +21,8 @@
 
 ## Store Metadata
 
-- App name: `Pickleball Score Keeper`
+- App name: `Easy Pickleball Scoreboard`
+- App Store Connect app ID: `6785500385`
 - Subtitle: `Official side-out scoring`
 - Category: Sports
 - Privacy: Data Not Collected
@@ -85,19 +86,19 @@
   - Local artifact: `builds/pickleball-score-keeper-ios-1.0.0-2-courtsideviewapp.ipa`
   - EAS build page: `https://expo.dev/accounts/abridegan/projects/pickleball-score-keeper/builds/891d1bdb-ae58-460d-a298-c59155b9500f`
   - IPA URL: `https://expo.dev/artifacts/eas/glaPKcDxtYF-WFPmkMBCL2erQmGcq4eTAeycK9nMnNA.ipa`
-  - Status: current App Store/TestFlight candidate; validated as iPhone-only, bundle ID `com.courtsideviewapp.pickleballscorekeeper`, version `1.0.0`, build `2`, encryption flag `false`.
+  - Status: obsolete because the App Store product name changed to `Easy Pickleball Scoreboard`; rebuild with the updated display name before submission.
 
 ### Submission Status
 
 - Android: EAS automated submit was attempted for the `internal` track and failed because Google requires the first submission of a new app to be performed manually in Play Console.
-- iOS: EAS automated submit is ready once the Pickleball App Store Connect app exists and its `ascAppId` is added to `eas.json`.
+- iOS: App Store Connect app exists as `Easy Pickleball Scoreboard` with `ascAppId` `6785500385`. EAS submit is configured to target that app.
 
 ## Remaining Console Setup
 
 1. Run `npm run release:check-boundary`.
-2. Create the Apple App Store Connect app record for the Pickleball bundle ID `com.courtsideviewapp.pickleballscorekeeper`.
-3. Add the resulting Pickleball `ascAppId` to `eas.json` under `submit.production.ios` if EAS cannot auto-detect it by bundle ID.
-4. Submit iOS build `891d1bdb-ae58-460d-a298-c59155b9500f` / build number `2` to App Store Connect/TestFlight.
-5. Create the Google Play Console app record for the Pickleball package name `com.courtsideviewapp.pickleballscorekeeper`.
-6. Run a fresh Android production build with the `com.courtsideviewapp.pickleballscorekeeper` package ID, then upload it to the `internal` track.
-7. Add internal testers in App Store Connect/TestFlight and Google Play Console.
+2. Run a fresh iOS production build so the IPA display name matches `Easy Pickleball Scoreboard`.
+3. Submit the fresh iOS build to App Store Connect/TestFlight.
+4. Complete App Store Connect product metadata, screenshots, privacy, rating, and review information in the browser.
+5. Add internal testers in App Store Connect/TestFlight.
+6. Create the Google Play Console app record for the Pickleball package name `com.courtsideviewapp.pickleballscorekeeper`.
+7. Run a fresh Android production build with the `com.courtsideviewapp.pickleballscorekeeper` package ID, then upload it to the `internal` track.

@@ -1,4 +1,4 @@
-# CODEX HAND-OFF: Pickleball Score Keeper v1.0
+# CODEX HAND-OFF: Easy Pickleball Scoreboard v1.0
 **Date:** 2026-06-11 · **Project root:** `/Users/user/Documents/Claude/Projects/pickleball-score-keeper` (standalone — already moved OUT of the CourtsideView folder; do NOT commit into the CourtsideView repo) · **Origin:** ported from CourtsideView's scorekeeper architecture and v11 design canon.
 
 A standalone iOS + Android app. One job: keep the official USA Pickleball score so players never wonder what the call is. Target user: older rec players (YMCA crowd) — big type, big tap targets, high contrast. Code-complete and **smoke-tested live in Expo Go on an iPhone 17 Pro simulator (2026-06-11)**; your job is finalize → repo → build → ship.
@@ -39,7 +39,7 @@ A standalone iOS + Android app. One job: keep the official USA Pickleball score 
 2. **Full-game smoke test.** Play to 11 incl. deuce (11-10 must NOT end; 12-10 ends), Save & Done → History, force-quit mid-game → Resume card. Test Android emulator too.
 3. **GitHub repo.** Use the standalone remote `https://github.com/pickleballscorekeeperapp/app.git`; do not push this code into the CourtsideView repo.
 4. **EAS setup.** Use the existing separate project `@abridegan/pickleball-score-keeper` (`6f29222e-67f0-411b-851b-32e23775487e`). It may share the `abridegan` owner with CourtsideView, but it must never reuse CourtsideView's project ID, bundle ID, App Store record, or git remote. Apple: same Developer account, new bundle ID + App Store Connect app.
-5. **Store metadata.** Name "Pickleball Score Keeper", subtitle "Official side-out scoring", category Sports. No tracking, no network calls, no permissions — privacy "Data Not Collected".
+5. **Store metadata.** Name "Easy Pickleball Scoreboard", subtitle "Official side-out scoring", category Sports. No tracking, no network calls, no permissions — privacy "Data Not Collected".
 
 ## Cross-cutting rules
 

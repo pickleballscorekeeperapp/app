@@ -1,4 +1,4 @@
-# Pickleball Score Keeper — Run Guide (for Kate)
+# Easy Pickleball Scoreboard — Run Guide (for Kate)
 
 ## What this is
 A brand-new, standalone app — same scorekeeper DNA as CourtsideView, but for pickleball with official USA Pickleball side-out scoring. It lives in its own local repo and points at its own GitHub remote.
@@ -28,5 +28,5 @@ Then press `i` for the iPhone simulator, or scan the QR code with the Expo Go ap
 - ✅ Codex: new GitHub remote set to `pickleballscorekeeperapp/app`
 - ✅ EAS project is separate from CourtsideView: `@abridegan/pickleball-score-keeper`
 - ⏳ Android smoke test (no Android SDK/emulator available on this Mac session)
-- ⏳ App Store / Play Store setup (new bundle ID: com.courtsideviewapp.pickleballscorekeeper)
+- ⏳ App Store / Play Store setup (new bundle ID: com.courtsideviewapp.pickleballscorekeeper; App Store name: Easy Pickleball Scoreboard)
 - 🎨 App icons are auto-generated placeholders — fine for testing, we'll design real ones before launch

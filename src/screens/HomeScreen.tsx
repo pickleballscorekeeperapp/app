@@ -26,7 +26,7 @@ export function HomeScreen() {
         { paddingTop: insets.top + space['6'], paddingBottom: insets.bottom + space['6'] },
       ]}
     >
-      <Text style={styles.title}>Pickleball{'\n'}Score Keeper</Text>
+      <Text style={styles.title}>Easy Pickleball{'\n'}Scoreboard</Text>
       <Text style={styles.subtitle}>
         Official USA Pickleball side-out scoring. Never wonder what the call is.
       </Text>
