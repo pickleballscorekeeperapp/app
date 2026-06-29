@@ -3,6 +3,7 @@ node_modules/
 dist/
 web-build/
 builds/
+build-artifacts/
 ios/
 android/
 coverage/

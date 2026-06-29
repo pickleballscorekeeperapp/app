@@ -1,8 +1,9 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { NavigationContainer } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import { SafeAreaProvider } from 'react-native-safe-area-context';
 import { StatusBar } from 'expo-status-bar';
+import mobileAds, { MaxAdContentRating } from 'react-native-google-mobile-ads';
 import { HomeScreen } from '@/screens/HomeScreen';
 import { SetupScreen } from '@/screens/SetupScreen';
 import { GameScreen } from '@/screens/GameScreen';
@@ -13,6 +14,18 @@ import type { RootStackParamList } from '@/navigation/types';
 const Stack = createNativeStackNavigator<RootStackParamList>();
 
 export default function App() {
+  useEffect(() => {
+    void mobileAds()
+      .setRequestConfiguration({
+        maxAdContentRating: MaxAdContentRating.G,
+        tagForChildDirectedTreatment: false,
+        tagForUnderAgeOfConsent: false,
+        testDeviceIdentifiers: __DEV__ ? ['EMULATOR'] : [],
+      })
+      .then(() => mobileAds().initialize())
+      .catch(() => undefined);
+  }, []);
+
   return (
     <SafeAreaProvider>
       <NavigationContainer>

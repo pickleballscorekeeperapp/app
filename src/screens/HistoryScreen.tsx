@@ -5,6 +5,7 @@ import { useSafeAreaInsets } from 'react-native-safe-area-context';
 import { colors, fontSize, fontWeight, radius, space } from '@/theme';
 import { useHistoryStore, type CompletedGame } from '@/store/historyStore';
 import { usePortraitOrientation } from '@/hooks/useScreenOrientation';
+import { AdBanner } from '@/components/AdBanner';
 import type { RootNav } from '@/navigation/types';
 
 export function HistoryScreen() {
@@ -41,6 +42,7 @@ export function HistoryScreen() {
         data={games}
         keyExtractor={(g) => g.id}
         contentContainerStyle={{ paddingBottom: insets.bottom + space['6'] }}
+        ListFooterComponent={<AdBanner />}
         ListEmptyComponent={
           <View style={styles.emptyCard}>
             <Text style={styles.emptyText}>No games yet. Go play!</Text>

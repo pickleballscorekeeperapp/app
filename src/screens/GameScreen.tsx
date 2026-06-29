@@ -17,6 +17,7 @@ import {
 import { useGameStore } from '@/store/gameStore';
 import { newGameId, useHistoryStore } from '@/store/historyStore';
 import { TeamPanel } from '@/components/TeamPanel';
+import { AdBanner } from '@/components/AdBanner';
 import { useUnlockedOrientation } from '@/hooks/useScreenOrientation';
 import { colors, fontSize, fontWeight, minTouch, radius, space } from '@/theme';
 import type { RootNav } from '@/navigation/types';
@@ -292,6 +293,8 @@ export function GameScreen() {
         </View>
       )}
 
+      <AdBanner style={styles.gameAd} />
+
       <View style={[styles.actions, { paddingBottom: insets.bottom + space['4'] }]}>
         <Pressable
           disabled={events.length === 0}
@@ -466,6 +469,10 @@ const styles = StyleSheet.create({
     color: '#FFFFFF',
     fontSize: fontSize.md,
     fontWeight: fontWeight.black,
+  },
+  gameAd: {
+    marginTop: space['3'],
+    marginBottom: 0,
   },
   actions: { flexDirection: 'row', gap: space['3'], marginTop: space['3'] },
   landscapeActions: {

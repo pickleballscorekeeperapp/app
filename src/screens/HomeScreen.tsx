@@ -7,6 +7,7 @@ import { useGameStore } from '@/store/gameStore';
 import { useHistoryStore } from '@/store/historyStore';
 import { replay, scoreCall } from '@/domain/scoring';
 import { usePortraitOrientation } from '@/hooks/useScreenOrientation';
+import { AdBanner } from '@/components/AdBanner';
 import type { RootNav } from '@/navigation/types';
 
 export function HomeScreen() {
@@ -122,6 +123,8 @@ export function HomeScreen() {
           </View>
         ))
       )}
+
+      <AdBanner />
 
       <Text style={styles.poweredBy}>Powered by CourtsideView</Text>
     </ScrollView>

@@ -25,9 +25,9 @@
 - App Store Connect app ID: `6785500385`
 - Subtitle: `Official side-out scoring`
 - Category: Sports
-- Privacy: Data Not Collected
-- Tracking: No
-- Network calls: None in v1
+- Privacy: App Privacy completed for free app with Google AdMob banner ads and the published privacy policy.
+- Tracking: No ATT prompt; ads request non-personalized traffic and app code caps ad content rating at General Audiences.
+- Network calls: Google Mobile Ads SDK banner ad requests in production.
 - Accounts/login: None in v1
 - Runtime permissions: None requested intentionally
 - In-app attribution: home screen footer says `Powered by CourtsideView`
@@ -128,19 +128,25 @@
   - IPA URL: `https://expo.dev/artifacts/eas/vtTdQW3fkl8n88stVuLJNRei_pVpkL8G016EGVNnTu0.ipa`
   - App Store Connect delivery UUID: `62371b06-2afa-4353-8fc3-b81c4fb289c6`
   - TestFlight page: `https://appstoreconnect.apple.com/apps/6785500385/testflight/ios`
-  - Status: current App Store/TestFlight candidate; confirmed `VALID` and `APP_STORE_ELIGIBLE` by Apple `altool`; validated as iPhone-only, display name `Easy Pickleball Scoreboard`, bundle ID `com.courtsideviewapp.pickleballscorekeeper`, version `1.0.0`, build `6`, portrait plus landscape orientations, encryption flag `false`.
+  - Status: superseded by build `8`, which adds the AdMob banner integration and final App Privacy disclosures.
+- iOS IPA
+  - EAS build ID: `32f8536d-8e12-415f-bdb8-74577548dcf6`
+  - Version: `1.0.0`
+  - Build number: `8`
+  - Local artifact: `build-artifacts/EasyPickleballScoreboard-1.0.0-8.ipa` (ignored by git)
+  - EAS build page: `https://expo.dev/accounts/abridegan/projects/pickleball-score-keeper/builds/32f8536d-8e12-415f-bdb8-74577548dcf6`
+  - IPA URL: `https://expo.dev/artifacts/eas/ycB4pws-zX8KHBVVCpJQ6UqHPTlj6AWv4eROIC0Secw.ipa`
+  - App Store Connect delivery UUID: `1e814a6f-d6c8-4207-b83e-ca30b7515ee3`
+  - Status: submitted to App Store Review on June 29, 2026; App Store Connect shows `Waiting for Review`.
 
 ### Submission Status
 
 - Android: EAS automated submit was attempted for the `internal` track and failed because Google requires the first submission of a new app to be performed manually in Play Console.
-- iOS: Build `6` was uploaded to App Store Connect and is `VALID` / `APP_STORE_ELIGIBLE`. Select build `6` on the `1.0 Prepare for Submission` page and finish metadata/review fields before adding the app for review.
+- iOS: Build `8` was uploaded to App Store Connect, attached to iOS version `1.0`, and submitted for Apple review. App Store Connect shows `Waiting for Review`.
 
 ## Remaining Console Setup
 
-1. On the `1.0 Prepare for Submission` page, select build `6`.
-2. Add one to ten iPhone screenshots. App previews are optional.
-3. Complete product metadata, app category, content rights, age rating, pricing/availability, App Privacy, support URL, privacy policy URL, copyright, and App Review contact/notes.
-4. Add internal testers in App Store Connect/TestFlight if desired.
-5. Click `Add for Review` after all required fields are complete.
-6. Create the Google Play Console app record for the Pickleball package name `com.courtsideviewapp.pickleballscorekeeper`.
-7. Run a fresh Android production build with the `com.courtsideviewapp.pickleballscorekeeper` package ID, then upload it to the `internal` track.
+1. Monitor App Store Connect and the Apple Developer email for review status or metadata questions.
+2. Add internal testers in App Store Connect/TestFlight if desired.
+3. Create the Google Play Console app record for the Pickleball package name `com.courtsideviewapp.pickleballscorekeeper`.
+4. Run a fresh Android production build with the `com.courtsideviewapp.pickleballscorekeeper` package ID, then upload it to the `internal` track.

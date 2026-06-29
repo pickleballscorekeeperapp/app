@@ -14,6 +14,7 @@ import { useSafeAreaInsets } from 'react-native-safe-area-context';
 import { colors, fontSize, fontWeight, minTouch, radius, shadows, space } from '@/theme';
 import { useGameStore } from '@/store/gameStore';
 import { usePortraitOrientation } from '@/hooks/useScreenOrientation';
+import { AdBanner } from '@/components/AdBanner';
 import type { TeamId } from '@/domain/scoring';
 import type { RootNav } from '@/navigation/types';
 
@@ -158,6 +159,8 @@ export function SetupScreen() {
         >
           <Text style={styles.ctaText}>START GAME</Text>
         </Pressable>
+
+        <AdBanner />
       </ScrollView>
     </KeyboardAvoidingView>
   );
